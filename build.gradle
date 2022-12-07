@@ -54,7 +54,7 @@ dependencies {
 
 
 	//	//for liquibase
-	//	implementation 'org.liquibase:liquibase-core:4.17.2'
+//		implementation 'org.liquibase:liquibase-core:4.17.2'
 }
 
 
