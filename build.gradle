@@ -1,0 +1,64 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.SimpleEventMaster'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+//for @Mapper
+ext {
+	mapstructVersion = "1.5.3.Final"
+}
+///orders in below dependencies are VERY IMPORTANT
+dependencies {
+	//for @Mapping
+	implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.onpositive.aml:org.aml.apimodel:0.11'
+
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	//for any app
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+	//for lombok @Data
+	implementation 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor "org.projectlombok:lombok:1.18.24"
+
+
+	testImplementation "org.testng:testng:6.10", "org.easytesting:fest-assert:1.4"
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.5.3.Final"
+
+
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'
+
+
+
+	//email server
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+
+	//	//for liquibase
+	//	implementation 'org.liquibase:liquibase-core:4.17.2'
+}
+
+
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
