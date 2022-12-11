@@ -56,4 +56,8 @@ public class UserController {
     }
 
 
+    public void nothingToDoMethod(){
+        int result=5*6;
+        System.out.println(result);
+    }
 }
