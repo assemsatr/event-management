@@ -8,6 +8,6 @@ event,user,role,attendees entities.
 A list can be viewed as paginated/filtered list. 
 Spring basic security configuration is implemented. 
 Retrieved all to-dos by logged in users.
-Mapping, ManyToOne, ManyToMany implemented.
+Mapping; ManyToOne, ManyToMany implemented.
 integrated with mail server to send emails and mail scheduling config.  
 used liquibase as db schema management.
