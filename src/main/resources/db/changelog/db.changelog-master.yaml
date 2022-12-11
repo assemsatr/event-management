@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - #we say here include everything in below path
+  - includeAll:
+      path: db/changelog/2022
